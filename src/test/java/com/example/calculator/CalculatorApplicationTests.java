@@ -24,7 +24,7 @@ public class CalculatorApplicationTests {
 
     @Test
     public void testAddition() throws Exception {
-        CalculatorRequest req = new CalculatorRequest("add", 2, 3);
+        CalculatorRequest req = new CalculatorRequest("add", 3, 3);
         String json = objectMapper.writeValueAsString(req);
         mockMvc.perform(post("/api/calculate")
                 .contentType(MediaType.APPLICATION_JSON)
